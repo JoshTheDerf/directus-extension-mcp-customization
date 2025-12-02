@@ -1,0 +1,51 @@
+{
+	"name": "directus-extension-mcp-customization",
+	"description": "Enable custom MCP tools in Directus by extending the built-in MCP endpoint",
+	"version": "1.0.1",
+	"author": {
+		"name": "Joshua Bemenderfer",
+		"email": "josh@thederf.com",
+		"url": "https://thederf.com"
+	},
+	"license": "MIT",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-extension-hook",
+		"mcp",
+		"model-context-protocol",
+		"custom-tools"
+	],
+	"icon": "extension",
+	"type": "module",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JoshTheDerf/directus-extension-mcp-customization.git"
+	},
+	"homepage": "https://github.com/JoshTheDerf/directus-extension-mcp-customization#readme",
+	"bugs": {
+		"url": "https://github.com/JoshTheDerf/directus-extension-mcp-customization/issues"
+	},
+	"directus:extension": {
+		"type": "hook",
+		"path": "dist/index.js",
+		"source": "src/index.ts",
+		"host": "^10.10.0"
+	},
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"validate": "directus-extension validate",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "17.0.3",
+		"@types/node": "^24.10.1",
+		"typescript": "^5.9.3"
+	}
+}
