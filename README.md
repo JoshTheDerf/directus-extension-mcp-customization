@@ -192,9 +192,25 @@ The accountability object is critical for:
 
 This extension must be installed before any other extensions that want to add custom MCP tools.
 
+Install via npm:
+
+```bash
+npm install directus-extension-mcp-customization
+```
+
+Or manually:
+
 ```bash
 npm install
 npm run build
 ```
 
 Then restart your Directus instance.
+
+## Related Extensions
+
+Extensions that build on this customization framework:
+
+- [`directus-extension-mcp-comments`](https://github.com/JoshTheDerf/directus-extension-mcp-comments) - Adds a tool for managing comments to Directus MCP
+- [`directus-extension-mcp-presets`](https://github.com/JoshTheDerf/directus-extension-mcp-presets) - Adds a tool for managing presets/bookmarks to Directus MCP
+- [`directus-extension-mcp-hello-world`](https://github.com/JoshTheDerf/directus-extension-mcp-hello-world) - Example custom MCP tool
